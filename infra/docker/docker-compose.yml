@@ -1,0 +1,66 @@
+﻿services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: cv-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-cv_app}
+      POSTGRES_USER: ${POSTGRES_USER:-cv_app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cv_app_password}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-cv_app} -d ${POSTGRES_DB:-cv_app}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - cv-network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: cv-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@local.dev}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: ${PGADMIN_CONFIG_SERVER_MODE:-False}
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - cv-network
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: cv-mailhog
+    restart: unless-stopped
+    environment:
+      MH_STORAGE: ${MH_STORAGE:-maildir}
+      MH_MAILDIR_PATH: /maildir
+    ports:
+      - "${MAILHOG_SMTP_PORT:-1025}:1025"
+      - "${MAILHOG_UI_PORT:-8025}:8025"
+    volumes:
+      - mailhog_data:/maildir
+    networks:
+      - cv-network
+
+volumes:
+  postgres_data:
+    name: cv_postgres_data
+  pgadmin_data:
+    name: cv_pgadmin_data
+  mailhog_data:
+    name: cv_mailhog_data
+
+networks:
+  cv-network:
+    name: cv-network
+    driver: bridge

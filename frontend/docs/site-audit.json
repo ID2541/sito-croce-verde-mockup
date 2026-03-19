@@ -1,0 +1,536 @@
+{
+  "generatedAt": "2026-03-03T21:23:51.269Z",
+  "baseUrl": "https://www.croceverdelucca.it",
+  "crawledCount": 45,
+  "pages": [
+    {
+      "url": "https://www.croceverdelucca.it",
+      "title": "Croce Verde Lucca – Pubblica Assistenza Lucca",
+      "type": "Home",
+      "navGroup": "home"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/24-dicembre-operazione-babbo-natale",
+      "title": "24 dicembre: Operazione Babbo Natale! – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/area-riservata-2",
+      "title": "Area Riservata – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/banco-della-spesa",
+      "title": "Banco della Spesa – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/basket-day-2026",
+      "title": "Basket Day 2026 – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/biblioteca-croce-verde-di-lucca",
+      "title": "Biblioteca Croce Verde di Lucca – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/bilancio",
+      "title": "Bilancio – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/bilancio-sociale",
+      "title": "Bilancio Sociale – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/carta-dei-valori",
+      "title": "Carta dei valori – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/chiusura-natalizia-della-biblioteca",
+      "title": "Chiusura natalizia della Biblioteca – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/contatti",
+      "title": "Contatti – Croce Verde Lucca",
+      "type": "Contact",
+      "navGroup": "contatti"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/cooperazione-internazionale",
+      "title": "Cooperazione internazionale – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/cosa-facciamo",
+      "title": "Cosa Facciamo – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/dona-5-per-1000",
+      "title": "Dona 5 per 1000 – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/donatori-sangue",
+      "title": "Donatori Sangue – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/donazioni",
+      "title": "Donazioni – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/epatite-c-screening-gratuito-per-tutto-il-2026",
+      "title": "Epatite C, screening gratuito per tutto il 2026! – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/eventi",
+      "title": "Eventi – Croce Verde Lucca",
+      "type": "Event",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/formazione",
+      "title": "Formazione – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/news",
+      "title": "News – Croce Verde Lucca",
+      "type": "PostList",
+      "navGroup": "news"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/organigramma",
+      "title": "Organigramma – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/parco-automezzi",
+      "title": "Parco Automezzi – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/patrimonio-immobiliare",
+      "title": "Patrimonio Immobiliare – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/pranzo-di-natale-2025",
+      "title": "Pranzo di Natale 2025 – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/prenota-servizi",
+      "title": "Prenota Servizi – Croce Verde Lucca",
+      "type": "Service",
+      "navGroup": "servizi"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/privacy",
+      "title": "Privacy – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/protezione-civile",
+      "title": "Protezione Civile – Croce Verde Lucca",
+      "type": "CivilProtection",
+      "navGroup": "protezione-civile"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/protezione-civile/caterattai",
+      "title": "Caterattai – Croce Verde Lucca",
+      "type": "CivilProtection",
+      "navGroup": "protezione-civile"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/protezione-civile/mezzi",
+      "title": "Mezzi – Croce Verde Lucca",
+      "type": "CivilProtection",
+      "navGroup": "protezione-civile"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/protezione-civile/soccorso-fluviale",
+      "title": "Soccorso Fluviale – Croce Verde Lucca",
+      "type": "CivilProtection",
+      "navGroup": "protezione-civile"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/protezione-civile/unita-cinofila",
+      "title": "Unità Cinofila – Croce Verde Lucca",
+      "type": "CivilProtection",
+      "navGroup": "protezione-civile"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/sede-centrale",
+      "title": "Sede Centrale – Croce Verde Lucca",
+      "type": "Location",
+      "navGroup": "sezioni"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/sedi-storiche",
+      "title": "Sedi Storiche – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/servizio-civile-universale-ecco-il-bando-2026",
+      "title": "Servizio Civile Universale: ecco il bando 2026! – Croce Verde Lucca",
+      "type": "Service",
+      "navGroup": "servizi"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/settore-culturale",
+      "title": "Settore Culturale – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/settore-progettazione",
+      "title": "Settore Progettazione e Sviluppoi – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/settore-sanitario",
+      "title": "Settore Sanitario – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/settore-sociale",
+      "title": "Settore Sociale – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/settore-tecnologie",
+      "title": "Settore Tecnologie – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/sezioni",
+      "title": "Sezioni – Croce Verde Lucca",
+      "type": "Location",
+      "navGroup": "sezioni"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/spiaggia-attrezzata",
+      "title": "Spiaggia Attrezzata – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/statuto",
+      "title": "Statuto – Croce Verde Lucca",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/storia",
+      "title": "Storia – Croce Verde Lucca",
+      "type": "About",
+      "navGroup": "chi-siamo"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/wp-login.php?action=lostpassword",
+      "title": "Password persa ‹ Croce Verde Lucca — WordPress",
+      "type": "Page",
+      "navGroup": "altro"
+    },
+    {
+      "url": "https://www.croceverdelucca.it/wp-login.php?redirect_to=https%3A%2F%2Fwww.croceverdelucca.it%2Fwp-admin%2F&reauth=1",
+      "title": "Accedi ‹ Croce Verde Lucca — WordPress",
+      "type": "Page",
+      "navGroup": "altro"
+    }
+  ],
+  "nav": [
+    {
+      "label": "Chi Siamo",
+      "href": "https://www.croceverdelucca.it/#",
+      "children": [
+        {
+          "label": "Chi Siamo",
+          "href": "https://www.croceverdelucca.it/#",
+          "children": []
+        },
+        {
+          "label": "Carta dei valori",
+          "href": "https://www.croceverdelucca.it/carta-dei-valori/",
+          "children": []
+        },
+        {
+          "label": "Organigramma",
+          "href": "https://www.croceverdelucca.it/organigramma/",
+          "children": []
+        },
+        {
+          "label": "Statuto",
+          "href": "https://www.croceverdelucca.it/statuto/",
+          "children": []
+        },
+        {
+          "label": "Storia",
+          "href": "https://www.croceverdelucca.it/storia/",
+          "children": []
+        },
+        {
+          "label": "Bilancio Sociale",
+          "href": "https://www.croceverdelucca.it/bilancio-sociale/",
+          "children": []
+        },
+        {
+          "label": "Bilancio",
+          "href": "https://www.croceverdelucca.it/bilancio/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Cosa Facciamo",
+      "href": "https://www.croceverdelucca.it/cosa-facciamo/",
+      "children": [
+        {
+          "label": "Cosa Facciamo",
+          "href": "https://www.croceverdelucca.it/cosa-facciamo/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Dona Ora",
+      "href": "https://www.croceverdelucca.it/donazioni/",
+      "children": [
+        {
+          "label": "Dona Ora",
+          "href": "https://www.croceverdelucca.it/donazioni/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Donatori Sangue",
+      "href": "https://www.croceverdelucca.it/donatori-sangue/",
+      "children": [
+        {
+          "label": "Donatori Sangue",
+          "href": "https://www.croceverdelucca.it/donatori-sangue/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Biblioteca",
+      "href": "https://www.croceverdelucca.it/biblioteca-croce-verde-di-lucca/",
+      "children": [
+        {
+          "label": "Biblioteca",
+          "href": "https://www.croceverdelucca.it/biblioteca-croce-verde-di-lucca/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Prenota Servizi",
+      "href": "https://www.croceverdelucca.it/prenota-servizi/",
+      "children": [
+        {
+          "label": "Prenota Servizi",
+          "href": "https://www.croceverdelucca.it/prenota-servizi/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "News",
+      "href": "https://www.croceverdelucca.it/news/",
+      "children": [
+        {
+          "label": "News",
+          "href": "https://www.croceverdelucca.it/news/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Eventi",
+      "href": "https://www.croceverdelucca.it/eventi/",
+      "children": [
+        {
+          "label": "Eventi",
+          "href": "https://www.croceverdelucca.it/eventi/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Contatti",
+      "href": "https://www.croceverdelucca.it/contatti/",
+      "children": [
+        {
+          "label": "Contatti",
+          "href": "https://www.croceverdelucca.it/contatti/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Area Riservata",
+      "href": "https://www.croceverdelucca.it/area-riservata-2/",
+      "children": [
+        {
+          "label": "Area Riservata",
+          "href": "https://www.croceverdelucca.it/area-riservata-2/",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "cvlucca@pec.croceverdelucca.it",
+      "href": "mailto:cvlucca@pec.croceverdelucca.it"
+    },
+    {
+      "label": "Privacy & Cookie",
+      "href": "https://www.croceverdelucca.it/privacy/"
+    },
+    {
+      "label": "MA.CO",
+      "href": "https://macomedia.it/"
+    }
+  ],
+  "keyContentAreas": [
+    "news",
+    "servizi",
+    "prenotazioni/richieste",
+    "contatti",
+    "protezione civile",
+    "sezioni/sedi",
+    "informazioni associazione"
+  ],
+  "contentTypes": [
+    "Post",
+    "Page",
+    "Service",
+    "Location",
+    "BookingRequest",
+    "ContactMessage",
+    "Event"
+  ],
+  "forms": {
+    "booking": [
+      "data",
+      "privacy",
+      "s",
+      "telefono",
+      "your-email",
+      "your-message",
+      "your-name",
+      "your-subject"
+    ],
+    "contact": [
+      "privacy",
+      "s",
+      "telefono",
+      "your-email",
+      "your-message",
+      "your-name",
+      "your-subject"
+    ],
+    "generic": [
+      "log",
+      "pwd",
+      "rememberme",
+      "s",
+      "submit",
+      "user_login",
+      "wp_lang"
+    ]
+  },
+  "urlPatterns": {
+    "pageLike": [
+      "/",
+      "/24-dicembre-operazione-babbo-natale",
+      "/area-riservata-2",
+      "/banco-della-spesa",
+      "/basket-day-2026",
+      "/biblioteca-croce-verde-di-lucca",
+      "/bilancio",
+      "/bilancio-sociale",
+      "/carta-dei-valori",
+      "/chiusura-natalizia-della-biblioteca",
+      "/contatti",
+      "/cooperazione-internazionale",
+      "/cosa-facciamo",
+      "/dona-5-per-1000",
+      "/donatori-sangue",
+      "/donazioni",
+      "/epatite-c-screening-gratuito-per-tutto-il-2026",
+      "/eventi",
+      "/formazione",
+      "/news",
+      "/organigramma",
+      "/parco-automezzi",
+      "/patrimonio-immobiliare",
+      "/pranzo-di-natale-2025",
+      "/prenota-servizi",
+      "/privacy",
+      "/protezione-civile",
+      "/protezione-civile/caterattai",
+      "/protezione-civile/mezzi",
+      "/protezione-civile/soccorso-fluviale",
+      "/protezione-civile/unita-cinofila",
+      "/sede-centrale",
+      "/sedi-storiche",
+      "/servizio-civile-universale-ecco-il-bando-2026",
+      "/settore-culturale",
+      "/settore-progettazione",
+      "/settore-sanitario",
+      "/settore-sociale",
+      "/settore-tecnologie",
+      "/sezioni",
+      "/spiaggia-attrezzata",
+      "/statuto",
+      "/storia",
+      "/wp-login.php",
+      "/wp-login.php"
+    ],
+    "hasNews": true,
+    "hasServices": true,
+    "hasCivilProtection": true,
+    "hasContacts": true,
+    "hasBooking": false,
+    "hasLocations": true
+  }
+}

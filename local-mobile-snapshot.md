@@ -1,0 +1,165 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link "Salta al contenuto" [ref=e4] [cursor=pointer]:
+        - /url: "#contenuto"
+      - generic [ref=e5]:
+        - link "Croce Verde" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - group [ref=e173]:
+          - generic "Menu" [ref=e174] [cursor=pointer]
+    - main [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - paragraph [ref=e26]: Pubblica assistenza
+            - heading "Servizi territoriali e supporto alla comunita" [level=1] [ref=e27]
+            - paragraph [ref=e28]: Informazioni utili, servizi territoriali, aggiornamenti e riferimenti operativi per cittadini, volontari e famiglie.
+            - generic [ref=e29]:
+              - link "Scopri i servizi" [ref=e30] [cursor=pointer]:
+                - /url: /servizi
+              - link "Prenota un servizio" [ref=e31] [cursor=pointer]:
+                - /url: /prenota-servizi
+            - paragraph [ref=e32]: Assistenza, trasporti, formazione e presidio sul territorio
+            - generic [ref=e33]:
+              - generic [ref=e34]: Prenotazioni rapide
+              - generic [ref=e35]: News operative
+              - generic [ref=e36]: Contatti diretti
+          - figure "Volontari e operatori impegnati nelle attivita territoriali" [ref=e38]:
+            - img "Volontari in coordinamento territoriale" [ref=e40]
+            - generic [ref=e41]: Volontari e operatori impegnati nelle attivita territoriali
+        - generic [ref=e42]:
+          - heading "Servizi principali" [level=2] [ref=e43]: Servizi principali
+          - generic [ref=e45]:
+            - article [ref=e46]:
+              - figure [ref=e47]:
+                - img "Servizio Ambulatori e prevenzione" [ref=e49]
+              - generic [ref=e50]:
+                - heading "Ambulatori e prevenzione" [level=3] [ref=e51]
+                - paragraph
+                - link "Approfondisci" [ref=e52] [cursor=pointer]:
+                  - /url: /servizi/ambulatori-prevenzione
+                  - text: Approfondisci
+                  - generic [ref=e53]: "->"
+            - article [ref=e54]:
+              - figure [ref=e55]:
+                - img "Servizio Formazione primo soccorso" [ref=e57]
+              - generic [ref=e58]:
+                - heading "Formazione primo soccorso" [level=3] [ref=e59]
+                - paragraph
+                - link "Approfondisci" [ref=e60] [cursor=pointer]:
+                  - /url: /servizi/formazione-primo-soccorso
+                  - text: Approfondisci
+                  - generic [ref=e61]: "->"
+            - article [ref=e62]:
+              - figure [ref=e63]:
+                - img "Servizio Supporto sociale" [ref=e65]
+              - generic [ref=e66]:
+                - heading "Supporto sociale" [level=3] [ref=e67]
+                - paragraph
+                - link "Approfondisci" [ref=e68] [cursor=pointer]:
+                  - /url: /servizi/supporto-sociale
+                  - text: Approfondisci
+                  - generic [ref=e69]: "->"
+            - article [ref=e70]:
+              - figure [ref=e71]:
+                - img "Servizio Trasporto sanitario" [ref=e73]
+              - generic [ref=e74]:
+                - heading "Trasporto sanitario" [level=3] [ref=e75]
+                - paragraph
+                - link "Approfondisci" [ref=e76] [cursor=pointer]:
+                  - /url: /servizi/trasporto-sanitario
+                  - text: Approfondisci
+                  - generic [ref=e77]: "->"
+        - generic [ref=e78]:
+          - generic [ref=e80]:
+            - heading "Un unico portale per cittadini, volontari e territorio" [level=2] [ref=e81]
+            - paragraph [ref=e82]: Il portale raccoglie riferimenti, materiali informativi e aggiornamenti per facilitare l'accesso ai servizi.
+            - list [ref=e83]:
+              - listitem [ref=e84]:
+                - generic [ref=e86]: Accesso rapido a servizi, contatti e sezioni operative.
+              - listitem [ref=e87]:
+                - generic [ref=e89]: Aggiornamenti redazionali per iniziative, attivita e avvisi.
+              - listitem [ref=e90]:
+                - generic [ref=e92]: Area formazione dedicata ai volontari autorizzati.
+          - complementary [ref=e93]:
+            - figure [ref=e94]:
+              - img "Dashboard operativa e pianificazione team" [ref=e96]
+            - generic [ref=e97]:
+              - heading "Focus operativo" [level=3] [ref=e98]
+              - paragraph [ref=e99]: Le informazioni pubblicate vengono organizzate per ridurre i passaggi necessari e indirizzare rapidamente verso il canale corretto.
+        - generic [ref=e100]:
+          - heading "Aggiornamenti recenti" [level=2] [ref=e101]
+          - generic [ref=e102]:
+            - article [ref=e103]:
+              - figure [ref=e104]:
+                - img "Immagine rappresentativa per Aggiornamento servizi territoriali" [ref=e106]
+              - generic [ref=e107]:
+                - paragraph [ref=e108]: news
+                - heading "Aggiornamento servizi territoriali" [level=3] [ref=e109]
+                - paragraph [ref=e110]: Nuova pianificazione settimanale dei servizi sul territorio.
+                - paragraph [ref=e111]: 01/03/2026
+                - link "Leggi articolo" [ref=e112] [cursor=pointer]:
+                  - /url: /news/aggiornamento-servizi-territoriali
+                  - text: Leggi articolo
+                  - generic [ref=e113]: "->"
+            - article [ref=e114]:
+              - figure [ref=e115]:
+                - img "Immagine rappresentativa per Incontro volontari protezione civile" [ref=e117]
+              - generic [ref=e118]:
+                - paragraph [ref=e119]: eventi
+                - heading "Incontro volontari protezione civile" [level=3] [ref=e120]
+                - paragraph [ref=e121]: Sessione informativa per nuovi volontari e cittadini.
+                - paragraph [ref=e122]: 20/02/2026
+                - link "Leggi articolo" [ref=e123] [cursor=pointer]:
+                  - /url: /news/incontro-volontari-protezione-civile
+                  - text: Leggi articolo
+                  - generic [ref=e124]: "->"
+        - generic [ref=e125]:
+          - generic [ref=e128]:
+            - heading "Vuoi attivare una richiesta?" [level=2] [ref=e129]
+            - paragraph [ref=e130]: Consulta la pagina prenotazioni per conoscere i canali attivi e le informazioni richieste dal team operativo.
+          - link "Vai alla prenotazione" [ref=e131] [cursor=pointer]:
+            - /url: /prenota-servizi
+    - contentinfo [ref=e132]:
+      - generic [ref=e133]:
+        - region "Associazione" [ref=e134]:
+          - heading "Associazione" [level=2] [ref=e135]
+          - paragraph [ref=e136]: Portale informativo per servizi territoriali, attivita formative e aggiornamenti rivolti a cittadini e volontari.
+        - region "Contatti" [ref=e137]:
+          - heading "Contatti" [level=2] [ref=e138]
+          - list [ref=e139]:
+            - listitem [ref=e140]: "Sede centrale: Indirizzo sede da configurare"
+            - listitem [ref=e141]: "Telefono: Da configurare"
+            - listitem [ref=e142]: "Email: Da configurare"
+        - region "Link utili" [ref=e143]:
+          - heading "Link utili" [level=2] [ref=e144]
+          - list [ref=e145]:
+            - listitem [ref=e146]:
+              - link "Servizi" [ref=e147] [cursor=pointer]:
+                - /url: /servizi
+            - listitem [ref=e148]:
+              - link "Formazione" [ref=e149] [cursor=pointer]:
+                - /url: /formazione
+            - listitem [ref=e150]:
+              - link "Protezione civile" [ref=e151] [cursor=pointer]:
+                - /url: /protezione-civile
+            - listitem [ref=e152]:
+              - link "News" [ref=e153] [cursor=pointer]:
+                - /url: /news
+            - listitem [ref=e154]:
+              - link "Contatti" [ref=e155] [cursor=pointer]:
+                - /url: /contatti
+            - listitem [ref=e156]:
+              - link "Area admin" [ref=e157] [cursor=pointer]:
+                - /url: /admin
+            - listitem [ref=e158]:
+              - link "Privacy" [ref=e159] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=e160]:
+              - link "Cookie policy" [ref=e161] [cursor=pointer]:
+                - /url: /cookie-policy
+      - generic [ref=e162]: © 2026 Croce Verde
+  - button "Open Next.js Dev Tools" [ref=e168] [cursor=pointer]:
+    - img [ref=e169]
+  - alert [ref=e172]

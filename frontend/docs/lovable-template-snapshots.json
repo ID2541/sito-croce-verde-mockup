@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-03T21:25:25.972Z",
+  "references": [
+    {
+      "url": "https://lovable.dev/templates/editorial/landing-page/giving-echoes-nonprofit-donation-landing-page-template",
+      "title": "Nonprofit Donation Page Template | Lovable",
+      "h1": "Giving Echoes - Nonprofit Donation Landing Page Template",
+      "subtitle": "Professional nonprofit donation page",
+      "screenshot": "./screenshots/giving-echoes-nonprofit-donation-landing-page-template.png"
+    },
+    {
+      "url": "https://lovable.dev/templates/editorial/blog/daily-neighbor-hyperlocal-community-news-platform-template",
+      "title": "Local News Website Template | Lovable",
+      "h1": "Daily Neighbor - Hyperlocal Community News Platform Template",
+      "subtitle": "Hyperlocal community news platform",
+      "screenshot": "./screenshots/daily-neighbor-hyperlocal-community-news-platform-template.png"
+    },
+    {
+      "url": "https://lovable.dev/templates/editorial/blog/daily-beacon-premium-news-publication-template",
+      "title": "News Publication Template | Lovable",
+      "h1": "Daily Beacon - Premium News Publication Template",
+      "subtitle": "Subscription-ready editorial news platform",
+      "screenshot": "./screenshots/daily-beacon-premium-news-publication-template.png"
+    },
+    {
+      "url": "https://lovable.dev/templates/events/event-platforms/event-platform-1",
+      "title": "Event Platform Website Template | Lovable",
+      "h1": "Event Platform Website Template",
+      "subtitle": "Launch a professional event platform with registration, maps, and real-time countdowns. Complete event management and discovery—go live in hours, not weeks.",
+      "screenshot": "./screenshots/event-platform-1.png"
+    },
+    {
+      "url": "https://lovable.dev/templates/blog/lifestyle/evolve-lifestyle-wellness-blog-template",
+      "title": "Lifestyle & Wellness Blog Template | Lovable",
+      "h1": "Evolve — Lifestyle & Wellness Blog Template",
+      "subtitle": "Editorial lifestyle blog design",
+      "screenshot": "./screenshots/evolve-lifestyle-wellness-blog-template.png"
+    }
+  ]
+}
