@@ -52,6 +52,78 @@ export type ApiPage = {
   updatedAt: string;
 };
 
+export type ApiFaq = {
+  id: string;
+  slug: string;
+  question: string;
+  answer: string;
+  category: string;
+  sortOrder: number;
+  isFeatured: boolean;
+  status: ContentStatus;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type ApiTransparencyCategoryParent = {
+  id: string;
+  slug: string;
+  title: string;
+};
+
+export type ApiTransparencyCategory = {
+  id: string;
+  slug: string;
+  title: string;
+  description: string | null;
+  parentId: string | null;
+  parent: ApiTransparencyCategoryParent | null;
+  sortOrder: number;
+  isActive: boolean;
+  publishedItemCount: number;
+};
+
+export type ApiTransparencyDocument = {
+  id: string;
+  label: string;
+  fileName: string;
+  publicUrl: string;
+  mimeType: string;
+  fileSizeBytes: number | null;
+  checksumSha256?: string | null;
+  language?: string | null;
+  isPrimary: boolean;
+  sortOrder?: number;
+  createdAt?: string;
+  updatedAt?: string;
+};
+
+export type ApiTransparencyItemCategory = {
+  id: string;
+  slug: string;
+  title: string;
+  description?: string | null;
+  sortOrder?: number;
+  parent?: ApiTransparencyCategoryParent | null;
+};
+
+export type ApiTransparencyItem = {
+  id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  content: string | null;
+  referenceYear: number | null;
+  referenceDate: string | null;
+  publishedAt: string | null;
+  updatedAt: string;
+  featured: boolean;
+  documentFormat: string;
+  sortOrder: number;
+  category: ApiTransparencyItemCategory;
+  documents: ApiTransparencyDocument[];
+};
+
 export type ListResponse<T> = {
   data: T[];
   meta: {

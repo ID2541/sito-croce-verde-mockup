@@ -1,11 +1,14 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import { fetchPublishedPosts } from "@/lib/api/posts";
+import { fetchTransparencyItems } from "@/lib/api/transparency";
 
 const staticRoutes = [
   "",
   "/chi-siamo",
+  "/trasparenza",
   "/servizi",
+  "/faq",
   "/prenota-servizi",
   "/sedi-contatti",
   "/protezione-civile",
@@ -21,7 +24,7 @@ const staticRoutes = [
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
-  const posts = await fetchPublishedPosts();
+  const [posts, transparencyItems] = await Promise.all([fetchPublishedPosts(), fetchTransparencyItems()]);
 
   const staticEntries = staticRoutes.map((path) => ({
     url: `${siteConfig.siteUrl}${path}`,
@@ -33,5 +36,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(post.publishedAt),
   }));
 
-  return [...staticEntries, ...postEntries];
+  const transparencyEntries = transparencyItems.map((item) => ({
+    url: `${siteConfig.siteUrl}/trasparenza/${item.slug}`,
+    lastModified: new Date(item.updatedAt),
+  }));
+
+  return [...staticEntries, ...postEntries, ...transparencyEntries];
 }

@@ -5,6 +5,7 @@ export const utilityLinks = [
 
 export const footerInstitutionalLinks = [
   { label: "Chi Siamo", href: "/chi-siamo" },
+  { label: "Trasparenza", href: "/trasparenza" },
   { label: "Servizi", href: "/servizi" },
   { label: "Sedi & Contatti", href: "/sedi-contatti" },
   { label: "Protezione Civile", href: "/protezione-civile" },
@@ -14,6 +15,7 @@ export const footerInstitutionalLinks = [
 
 export const footerActionLinks = [
   { label: "Prenota Servizi", href: "/prenota-servizi" },
+  { label: "FAQ", href: "/faq" },
   { label: "Dona Ora", href: "/donazioni" },
   { label: "Donatori Sangue", href: "/donatori-sangue" },
   { label: "News & Eventi", href: "/news-eventi" },

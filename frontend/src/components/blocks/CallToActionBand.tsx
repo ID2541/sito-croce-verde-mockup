@@ -9,7 +9,7 @@ type CallToActionBandProps = {
 
 export function CallToActionBand({ title, description, actionLabel, actionHref }: CallToActionBandProps) {
   return (
-    <section className="cta-sheen animate-reveal relative overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-800 via-emerald-700 to-green-600 px-6 py-8 text-white shadow-[0_24px_34px_-26px_rgba(11,90,42,0.9)] sm:flex sm:items-center sm:justify-between sm:gap-6">
+    <section className="cta-sheen animate-reveal relative overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-800 via-emerald-700 to-green-600 px-6 py-8 text-white shadow-[0_24px_34px_-26px_rgba(19,81,44,0.9)] sm:flex sm:items-center sm:justify-between sm:gap-6">
       <div aria-hidden="true" className="animate-float-slow absolute -right-10 -top-10 h-36 w-36 rounded-full bg-white/20 blur-xl" />
       <div aria-hidden="true" className="animate-float-fast absolute -left-12 bottom-0 h-28 w-28 rounded-full bg-emerald-200/30 blur-xl" />
       <div className="relative z-10">

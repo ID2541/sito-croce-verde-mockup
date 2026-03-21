@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CallToActionBand } from "@/components/blocks/CallToActionBand";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { SectionImage } from "@/components/media/SectionImage";
@@ -29,6 +30,8 @@ const pillars = [
     title: "Trasparenza",
     description:
       "Informazioni essenziali, canali ufficiali e contenuti di servizio organizzati in modo semplice da consultare.",
+    href: "/trasparenza",
+    ctaLabel: "Apri la sezione",
   },
 ];
 
@@ -64,12 +67,26 @@ export default function ChiSiamoPage() {
       />
 
       <section id="missione" className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        {pillars.map((pillar) => (
-          <article key={pillar.title} className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-site-accent">{pillar.title}</p>
-            <p className="mt-3 text-sm text-site-muted">{pillar.description}</p>
-          </article>
-        ))}
+        {pillars.map((pillar) =>
+          pillar.href ? (
+            <Link
+              key={pillar.title}
+              href={pillar.href}
+              className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-200 hover:bg-emerald-50/40"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-site-accent">{pillar.title}</p>
+              <p className="mt-3 text-sm text-site-muted">{pillar.description}</p>
+              <span className="mt-4 inline-flex rounded-full bg-site-accent px-3 py-1 text-xs font-semibold text-white">
+                {pillar.ctaLabel}
+              </span>
+            </Link>
+          ) : (
+            <article key={pillar.title} className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-site-accent">{pillar.title}</p>
+              <p className="mt-3 text-sm text-site-muted">{pillar.description}</p>
+            </article>
+          ),
+        )}
       </section>
 
       <section id="cosa-facciamo" className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">

@@ -32,8 +32,8 @@ export default async function HomePage() {
         title="Presidio territoriale, servizi alla persona e comunita in un unico portale"
         description="Un sito pensato per cittadini, volontari e famiglie: orientamento rapido, servizi attivabili, riferimenti territoriali e aggiornamenti utili senza rumore."
         actions={[
-          { label: "Prenota un servizio", href: "/prenota-servizi" },
-          { label: "Dona ora", href: "/donazioni", variant: "secondary" },
+          { label: "Prenota un servizio", href: "/prenota-servizi", variant: "secondary" },
+          { label: "Dona ora", href: "/donazioni", variant: "warm" },
         ]}
         meta="Servizi, volontariato, protezione civile, donazioni e aggiornamenti di territorio"
         imageSrc={placeholderImages.homeHero}

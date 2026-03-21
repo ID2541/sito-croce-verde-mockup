@@ -11,6 +11,7 @@ export const publicNav: NavItem[] = [
     children: [
       { label: "Missione & storia", href: "/chi-siamo#missione" },
       { label: "Cosa facciamo", href: "/chi-siamo#cosa-facciamo" },
+      { label: "Trasparenza", href: "/trasparenza" },
     ],
   },
   {
@@ -45,6 +46,10 @@ export const publicNav: NavItem[] = [
   {
     label: "News & Eventi",
     href: "/news-eventi",
+  },
+  {
+    label: "FAQ",
+    href: "/faq",
   },
   {
     label: "Area Riservata",

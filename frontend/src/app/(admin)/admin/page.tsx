@@ -57,6 +57,9 @@ export default function AdminEntryPage() {
             <Link href="/admin/news" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950">
               Gestisci news
             </Link>
+            <Link href="/admin/faqs" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950">
+              Gestisci FAQ
+            </Link>
             <button
               type="button"
               onClick={handleLogout}

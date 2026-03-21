@@ -1,0 +1,10 @@
+Dati RUNTS
+
+Documento dimostrativo per la sezione Trasparenza.
+
+Esempio contenuti:
+- numero di repertorio RUNTS
+- sezione di iscrizione
+- data di iscrizione
+- sede legale
+- codice fiscale

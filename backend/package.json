@@ -12,15 +12,15 @@
     "build": "next build",
     "start": "next start -p 3001",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test tests/**/*.test.ts",
+    "test": "node --env-file=.env --import tsx --test tests/**/*.test.ts",
     "ci:check": "pnpm run typecheck && pnpm run test && pnpm run build",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:deploy": "prisma migrate deploy",
     "prisma:studio": "prisma studio",
-    "prisma:seed": "tsx prisma/seed.ts",
-    "admin:bootstrap": "tsx scripts/bootstrap-admin.ts",
-    "training:grant": "tsx scripts/create-training-access-grant.ts"
+    "prisma:seed": "node --env-file=.env --import tsx prisma/seed.ts",
+    "admin:bootstrap": "node --env-file=.env --import tsx scripts/bootstrap-admin.ts",
+    "training:grant": "node --env-file=.env --import tsx scripts/create-training-access-grant.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.4.1",

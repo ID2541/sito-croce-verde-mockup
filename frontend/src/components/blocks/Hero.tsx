@@ -4,7 +4,7 @@ import { SectionImage } from "@/components/media/SectionImage";
 type HeroAction = {
   label: string;
   href: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "warm";
 };
 
 type HeroProps = {
@@ -29,7 +29,7 @@ export function Hero({
   imageCaption,
 }: HeroProps) {
   return (
-    <section className="mesh-surface animate-reveal relative overflow-hidden rounded-[2rem] border border-emerald-100/90 px-6 py-10 shadow-[0_18px_50px_-32px_rgba(11,90,42,0.55)] sm:px-10">
+    <section className="mesh-surface animate-reveal relative overflow-hidden rounded-[2rem] border border-emerald-100/90 px-6 py-10 shadow-[0_18px_50px_-32px_rgba(19,81,44,0.55)] sm:px-10">
       <div aria-hidden="true" className="animate-float-slow absolute -left-14 top-10 h-32 w-32 rounded-full bg-emerald-200/45 blur-2xl" />
       <div aria-hidden="true" className="animate-float-fast absolute -right-10 bottom-6 h-40 w-40 rounded-full bg-sky-200/45 blur-2xl" />
 
@@ -50,7 +50,9 @@ export function Hero({
                   className={
                     action.variant === "secondary"
                       ? "link-focus inline-flex items-center rounded-full border border-emerald-200 bg-white/80 px-5 py-2.5 text-sm font-semibold text-site-ink transition hover:-translate-y-0.5 hover:bg-white"
-                      : "link-focus inline-flex items-center rounded-full bg-site-accent px-5 py-2.5 text-sm font-semibold text-white shadow-[0_12px_24px_-16px_rgba(11,90,42,0.8)] transition hover:-translate-y-0.5 hover:bg-emerald-700"
+                      : action.variant === "warm"
+                        ? "link-focus inline-flex items-center rounded-full bg-site-warm px-5 py-2.5 text-sm font-semibold text-white shadow-[0_12px_24px_-16px_rgba(234,113,49,0.48)] transition hover:-translate-y-0.5 hover-site-warm-strong"
+                      : "link-focus inline-flex items-center rounded-full bg-site-accent px-5 py-2.5 text-sm font-semibold text-white shadow-[0_12px_24px_-16px_rgba(19,81,44,0.72)] transition hover:-translate-y-0.5 hover:bg-emerald-700"
                   }
                 >
                   {action.label}

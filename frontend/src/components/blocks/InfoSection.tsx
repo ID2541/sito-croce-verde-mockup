@@ -34,7 +34,7 @@ export function InfoSection({
           ))}
         </ul>
       </div>
-      <aside className="glass-panel relative z-10 space-y-4 rounded-xl border border-emerald-100 p-5 shadow-[0_22px_28px_-26px_rgba(11,90,42,0.6)]">
+      <aside className="glass-panel relative z-10 space-y-4 rounded-xl border border-emerald-100 p-5 shadow-[0_22px_28px_-26px_rgba(19,81,44,0.52)]">
         {imageSrc ? (
           <SectionImage
             src={imageSrc}

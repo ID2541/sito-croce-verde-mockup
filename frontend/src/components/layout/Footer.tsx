@@ -12,16 +12,16 @@ export function Footer() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Assistenza & orientamento</p>
             <p className="mt-1 text-sm">Per richieste ordinarie usa i canali ufficiali o la pagina prenotazioni.</p>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-nowrap items-center justify-end gap-2 self-start sm:self-end lg:self-auto">
             <Link
               href="/prenota-servizi"
-              className="link-focus inline-flex rounded-full border border-emerald-300 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="link-focus inline-flex whitespace-nowrap rounded-full border border-emerald-300 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Prenota Servizi
             </Link>
             <Link
               href="/donazioni"
-              className="link-focus inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-site-accent transition hover:bg-emerald-50"
+              className="link-focus inline-flex whitespace-nowrap rounded-full bg-site-warm px-4 py-2 text-sm font-semibold text-white transition hover-site-warm-strong"
             >
               Dona Ora
             </Link>
@@ -29,24 +29,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_0.9fr_1fr_0.9fr] lg:px-8">
-        <section aria-labelledby="footer-identita">
-          <h2 id="footer-identita" className="text-base font-semibold text-site-ink">
-            {siteConfig.organizationName}
-          </h2>
-          <p className="mt-3 text-sm text-site-muted">{siteConfig.organizationDescription}</p>
-          <dl className="mt-4 space-y-2 text-sm text-site-muted">
-            <div>
-              <dt className="font-semibold text-site-ink">Presidio territoriale</dt>
-              <dd>{siteConfig.servedArea}</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-site-ink">Orari indicativi</dt>
-              <dd>{siteConfig.serviceHours}</dd>
-            </div>
-          </dl>
-        </section>
-
+      <div className="mx-auto grid w-full max-w-5xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-3 lg:px-8">
         <section aria-labelledby="footer-contatti">
           <h2 id="footer-contatti" className="text-base font-semibold text-site-ink">
             Contatti istituzionali

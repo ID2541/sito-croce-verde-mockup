@@ -18,6 +18,12 @@ enum ContentStatus {
   PUBLISHED
 }
 
+enum TransparencyStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
 model User {
   id           String   @id @default(uuid()) @db.Uuid
   email        String   @unique
@@ -63,6 +69,84 @@ model Page {
   content   String   @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Faq {
+  id         String        @id @default(uuid()) @db.Uuid
+  slug       String        @unique
+  question   String
+  answer     String        @db.Text
+  category   String
+  sortOrder  Int           @default(0)
+  isFeatured Boolean       @default(false)
+  status     ContentStatus @default(PUBLISHED)
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+
+  @@index([status, category, sortOrder])
+  @@index([isFeatured, sortOrder])
+}
+
+model TransparencyCategory {
+  id          String                 @id @default(uuid()) @db.Uuid
+  slug        String                 @unique
+  title       String
+  description String?                @db.Text
+  parentId    String?                @db.Uuid
+  parent      TransparencyCategory?   @relation("TransparencyCategoryTree", fields: [parentId], references: [id], onDelete: SetNull)
+  children    TransparencyCategory[]  @relation("TransparencyCategoryTree")
+  sortOrder   Int                    @default(0)
+  isActive    Boolean                @default(true)
+  items       TransparencyItem[]
+  createdAt   DateTime               @default(now())
+  updatedAt   DateTime               @updatedAt
+
+  @@index([parentId])
+  @@index([isActive, sortOrder])
+}
+
+model TransparencyItem {
+  id            String                  @id @default(uuid()) @db.Uuid
+  slug          String                  @unique
+  title         String
+  summary       String
+  content       String?                 @db.Text
+  categoryId    String                  @db.Uuid
+  category      TransparencyCategory    @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  referenceYear Int?
+  referenceDate DateTime?
+  publishedAt   DateTime?
+  status        TransparencyStatus      @default(DRAFT)
+  featured      Boolean                 @default(false)
+  documentFormat String                 @default("PDF")
+  sortOrder     Int                     @default(0)
+  documents     TransparencyDocument[]
+  createdAt     DateTime                @default(now())
+  updatedAt     DateTime                @updatedAt
+
+  @@index([categoryId, status])
+  @@index([status, publishedAt])
+  @@index([referenceYear])
+  @@index([featured, sortOrder])
+}
+
+model TransparencyDocument {
+  id             String              @id @default(uuid()) @db.Uuid
+  itemId         String              @db.Uuid
+  item           TransparencyItem    @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  label          String
+  fileName       String
+  publicUrl      String              @unique
+  mimeType       String
+  fileSizeBytes  Int?
+  checksumSha256 String?
+  language       String?
+  isPrimary      Boolean             @default(false)
+  sortOrder      Int                 @default(0)
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+
+  @@index([itemId, isPrimary, sortOrder])
 }
 
 model Location {

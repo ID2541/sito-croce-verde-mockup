@@ -1,0 +1,10 @@
+Organi sociali 2026
+
+Documento dimostrativo per la sezione Trasparenza.
+
+Esempio struttura:
+- Presidente
+- Vicepresidente
+- Consiglio direttivo
+- Organo di controllo
+- Revisore legale

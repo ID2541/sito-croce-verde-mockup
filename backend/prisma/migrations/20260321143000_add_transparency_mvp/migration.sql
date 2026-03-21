@@ -1,0 +1,3 @@
+-- No-op migration.
+-- This folder remains only to preserve local migration ordering after the
+-- transparency MVP schema was consolidated into 20260321120000_transparency_mvp.
