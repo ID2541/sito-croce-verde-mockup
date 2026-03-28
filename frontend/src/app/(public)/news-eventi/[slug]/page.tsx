@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { mockPosts } from "@/content/mock/posts";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { SectionImage } from "@/components/media/SectionImage";
 import { siteConfig } from "@/config/site";
@@ -11,6 +12,12 @@ type NewsEventiDetailProps = {
   params: Promise<{ slug: string }>;
 };
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return mockPosts.map((post) => ({ slug: post.slug }));
+}
+
 export async function generateMetadata({ params }: NewsEventiDetailProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await fetchPostBySlug(slug);
@@ -19,7 +26,7 @@ export async function generateMetadata({ params }: NewsEventiDetailProps): Promi
     title: post ? post.title : "News & Eventi",
     description: post?.excerpt,
     alternates: {
-      canonical: `/news-eventi/${slug}`,
+      canonical: `${siteConfig.siteUrl}/news-eventi/${slug}`,
     },
     openGraph: post
       ? {

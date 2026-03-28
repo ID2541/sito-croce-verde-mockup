@@ -1,3 +1,4 @@
+import { env } from "@/config/env";
 import { apiFetch } from "./client";
 import type { ApiTransparencyCategory, ApiTransparencyItem, ListResponse } from "./types";
 
@@ -365,7 +366,15 @@ const transparencyItemsFallback: ApiTransparencyItem[] = [
   },
 ];
 
+export function getStaticTransparencyItems(): ApiTransparencyItem[] {
+  return transparencyItemsFallback;
+}
+
 export async function fetchTransparencyCategories(): Promise<ApiTransparencyCategory[]> {
+  if (env.staticDemo) {
+    return transparencyCategoriesFallback;
+  }
+
   try {
     const response = await apiFetch<ListResponse<ApiTransparencyCategory>>("/api/transparency/categories", {
       next: { revalidate: 300 },
@@ -379,6 +388,10 @@ export async function fetchTransparencyCategories(): Promise<ApiTransparencyCate
 }
 
 export async function fetchTransparencyItems(): Promise<ApiTransparencyItem[]> {
+  if (env.staticDemo) {
+    return getStaticTransparencyItems();
+  }
+
   try {
     const response = await apiFetch<ListResponse<ApiTransparencyItem>>("/api/transparency/items?page=1&pageSize=50", {
       next: { revalidate: 300 },
@@ -392,6 +405,10 @@ export async function fetchTransparencyItems(): Promise<ApiTransparencyItem[]> {
 }
 
 export async function fetchTransparencyItemBySlug(slug: string): Promise<ApiTransparencyItem | null> {
+  if (env.staticDemo) {
+    return getStaticTransparencyItems().find((item) => item.slug === slug) ?? null;
+  }
+
   try {
     const response = await apiFetch<{ data: ApiTransparencyItem }>(`/api/transparency/items/by-slug/${slug}`, {
       next: { revalidate: 300 },
@@ -400,7 +417,7 @@ export async function fetchTransparencyItemBySlug(slug: string): Promise<ApiTran
     return response.data;
   } catch (error) {
     console.error(`Unable to fetch transparency item by slug: ${slug}`, error);
-    return transparencyItemsFallback.find((item) => item.slug === slug) ?? null;
+    return getStaticTransparencyItems().find((item) => item.slug === slug) ?? null;
   }
 }
 

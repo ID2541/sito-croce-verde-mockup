@@ -1,3 +1,4 @@
+import { env } from "@/config/env";
 import type { Location } from "@/content/mock/types";
 import { mockLocations } from "@/content/mock/locations";
 import { getLocationPlaceholder } from "@/lib/placeholders";
@@ -19,6 +20,10 @@ function toUiLocation(location: ApiLocation): Location {
 }
 
 export async function fetchLocations(): Promise<Location[]> {
+  if (env.staticDemo) {
+    return mockLocations;
+  }
+
   try {
     const response = await apiFetch<ListResponse<ApiLocation>>("/api/locations?page=1&pageSize=50", {
       next: { revalidate: 300 },

@@ -1,3 +1,4 @@
+import { env } from "@/config/env";
 import type { FaqItem, FaqSection } from "@/content/faqs";
 import { faqCategories, faqMetadataBySlug, faqSections as fallbackFaqSections } from "@/content/faqs";
 import { apiFetch } from "./client";
@@ -30,6 +31,10 @@ function toUiFaqItem(faq: ApiFaq): FaqItem | null {
 }
 
 export async function fetchFaqSections(): Promise<FaqSection[]> {
+  if (env.staticDemo) {
+    return fallbackFaqSections;
+  }
+
   try {
     const response = await apiFetch<ListResponse<ApiFaq>>("/api/faqs?page=1&pageSize=50", {
       next: { revalidate: 300 },
@@ -53,6 +58,10 @@ export async function fetchFaqSections(): Promise<FaqSection[]> {
 }
 
 export async function fetchFaqBySlug(slug: string): Promise<FaqItem | null> {
+  if (env.staticDemo) {
+    return faqMetadataBySlug[slug] ?? null;
+  }
+
   try {
     const response = await apiFetch<ItemResponse<ApiFaq>>(`/api/faqs/by-slug/${slug}`, {
       next: { revalidate: 300 },

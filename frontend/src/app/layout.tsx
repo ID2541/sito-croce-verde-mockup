@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.organizationDescription,
   alternates: {
-    canonical: "/",
+    canonical: siteConfig.siteUrl,
   },
   openGraph: {
     type: "website",

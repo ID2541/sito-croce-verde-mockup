@@ -3,6 +3,8 @@ import { siteConfig } from "@/config/site";
 import { fetchPublishedPosts } from "@/lib/api/posts";
 import { fetchTransparencyItems } from "@/lib/api/transparency";
 
+export const dynamic = "force-static";
+
 const staticRoutes = [
   "",
   "/chi-siamo",

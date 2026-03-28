@@ -1,17 +1,29 @@
-﻿import type { NextConfig } from "next";
+import type { NextConfig } from "next";
+
+function normalizeBasePath(value: string | undefined): string {
+  if (!value || value === "/") {
+    return "";
+  }
+
+  const withLeadingSlash = value.startsWith("/") ? value : `/${value}`;
+  return withLeadingSlash.endsWith("/") ? withLeadingSlash.slice(0, -1) : withLeadingSlash;
+}
+
+const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  async redirects() {
-    return [
-      { source: "/contatti", destination: "/sedi-contatti", permanent: true },
-      { source: "/sezioni", destination: "/sedi-contatti", permanent: true },
-      { source: "/formazione", destination: "/volontariato-formazione", permanent: true },
-      { source: "/news", destination: "/news-eventi", permanent: true },
-      { source: "/news/:slug", destination: "/news-eventi/:slug", permanent: true },
-      { source: "/servizi/:slug", destination: "/servizi", permanent: true },
-    ];
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
   },
+  ...(basePath
+    ? {
+        basePath,
+        assetPrefix: basePath,
+      }
+    : {}),
 };
 
 export default nextConfig;

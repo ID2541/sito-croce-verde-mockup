@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { withBasePath } from "@/config/env";
 import { CallToActionBand } from "@/components/blocks/CallToActionBand";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { fetchTransparencyHub } from "@/lib/api/transparency";
@@ -182,7 +183,7 @@ export default async function TrasparenzaPage() {
                     </Link>
                     {primaryDocument ? (
                       <a
-                        href={primaryDocument.publicUrl}
+                        href={withBasePath(primaryDocument.publicUrl)}
                         className="link-focus inline-flex rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm font-semibold text-site-accent transition hover:border-emerald-300 hover:bg-emerald-50"
                       >
                         Documento
@@ -265,7 +266,7 @@ export default async function TrasparenzaPage() {
                               </p>
                             </div>
                             <a
-                              href={document.publicUrl}
+                              href={withBasePath(document.publicUrl)}
                               className="link-focus inline-flex rounded-full bg-site-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
                             >
                               Apri

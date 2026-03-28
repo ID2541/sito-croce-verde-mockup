@@ -1,3 +1,4 @@
+import { env } from "@/config/env";
 import type { Service } from "@/content/mock/types";
 import { getServiceBySlug as getMockServiceBySlug, mockServices } from "@/content/mock/services";
 import { getServicePlaceholder, normalizeImageSrc } from "@/lib/placeholders";
@@ -30,6 +31,10 @@ function toUiService(service: ApiService): Service {
 }
 
 export async function fetchServices(): Promise<Service[]> {
+  if (env.staticDemo) {
+    return mockServices;
+  }
+
   try {
     const response = await apiFetch<ListResponse<ApiService>>("/api/services?page=1&pageSize=50", {
       next: { revalidate: 300 },
@@ -43,6 +48,10 @@ export async function fetchServices(): Promise<Service[]> {
 }
 
 export async function fetchServiceBySlug(slug: string): Promise<Service | null> {
+  if (env.staticDemo) {
+    return getMockServiceBySlug(slug) ?? null;
+  }
+
   try {
     const response = await apiFetch<ItemResponse<ApiService>>(`/api/services/by-slug/${slug}`, {
       next: { revalidate: 300 },

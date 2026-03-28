@@ -1,0 +1,93 @@
+name: Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.1
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4
+          run_install: false
+
+      - name: Compute public env
+        shell: bash
+        run: |
+          repo="${GITHUB_REPOSITORY#*/}"
+          owner="$(printf '%s' "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]')"
+          default_base_path="/$repo"
+          default_site_url="https://${owner}.github.io/$repo"
+
+          if [ "$repo" = "${owner}.github.io" ]; then
+            default_base_path=""
+            default_site_url="https://${owner}.github.io"
+          fi
+
+          base_path="${{ vars.PAGES_BASE_PATH }}"
+          site_url="${{ vars.PAGES_SITE_URL }}"
+
+          if [ -z "$base_path" ]; then
+            base_path="$default_base_path"
+          fi
+
+          if [ -z "$site_url" ]; then
+            site_url="$default_site_url"
+          fi
+
+          echo "NEXT_PUBLIC_BASE_PATH=$base_path" >> "$GITHUB_ENV"
+          echo "NEXT_PUBLIC_SITE_URL=$site_url" >> "$GITHUB_ENV"
+          echo "NEXT_PUBLIC_STATIC_DEMO=true" >> "$GITHUB_ENV"
+          echo "NEXT_PUBLIC_API_BASE_URL=" >> "$GITHUB_ENV"
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: pnpm install --frozen-lockfile
+
+      - name: Build static frontend
+        working-directory: frontend
+        run: pnpm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

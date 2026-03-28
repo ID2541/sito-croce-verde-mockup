@@ -20,6 +20,7 @@ backend/node_modules/
 frontend/node_modules/
 backend/.next/
 frontend/.next/
+frontend/out/
 
 backend/dev.log
 backend/dev.err.log

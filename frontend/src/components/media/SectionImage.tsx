@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/config/env";
 
 type SectionImageProps = {
   src: string;
@@ -17,11 +18,13 @@ export function SectionImage({
   className,
   caption,
 }: SectionImageProps) {
+  const resolvedSrc = withBasePath(src);
+
   return (
     <figure className={`media-frame overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-sm ${className ?? ""}`}>
       <div className={`relative ${ratioClassName}`}>
         <Image
-          src={src}
+          src={resolvedSrc}
           alt={alt}
           fill
           priority={priority}

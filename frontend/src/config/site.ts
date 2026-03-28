@@ -1,5 +1,15 @@
+import { env } from "./env";
+
+function stripTrailingSlash(value: string): string {
+  return value.endsWith("/") ? value.slice(0, -1) : value;
+}
+
+const fallbackSiteUrl = env.staticDemo ? "https://example.com" : "http://localhost:3000";
+
 export const siteConfig = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  siteUrl: stripTrailingSlash(process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl),
+  basePath: env.basePath,
+  isStaticDemo: env.staticDemo,
   organizationName: process.env.NEXT_PUBLIC_ORGANIZATION_NAME ?? "Croce Verde",
   organizationLegalName:
     process.env.NEXT_PUBLIC_ORGANIZATION_LEGAL_NAME ?? "Croce Verde Pubblica Assistenza",

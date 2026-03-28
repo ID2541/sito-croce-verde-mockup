@@ -52,7 +52,7 @@ export const publicNav: NavItem[] = [
     href: "/faq",
   },
   {
-    label: "Area Riservata",
+    label: "Area Riservata (demo)",
     href: "/area-riservata",
   },
 ];

@@ -1,3 +1,4 @@
+import { env } from "@/config/env";
 import type { Post } from "@/content/mock/types";
 import { getPostBySlug as getMockPostBySlug, mockPosts } from "@/content/mock/posts";
 import { getPostPlaceholder, normalizeImageSrc } from "@/lib/placeholders";
@@ -31,6 +32,10 @@ function toUiPost(post: ApiPost): Post {
 }
 
 export async function fetchPublishedPosts(): Promise<Post[]> {
+  if (env.staticDemo) {
+    return [...mockPosts].sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  }
+
   try {
     const response = await apiFetch<ListResponse<ApiPost>>("/api/posts?status=PUBLISHED&page=1&pageSize=20", {
       next: { revalidate: 300 },
@@ -46,6 +51,10 @@ export async function fetchPublishedPosts(): Promise<Post[]> {
 }
 
 export async function fetchPostBySlug(slug: string): Promise<Post | null> {
+  if (env.staticDemo) {
+    return getMockPostBySlug(slug) ?? null;
+  }
+
   try {
     const response = await apiFetch<ItemResponse<ApiPost>>(`/api/posts/by-slug/${slug}`, {
       next: { revalidate: 300 },

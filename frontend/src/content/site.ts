@@ -1,6 +1,6 @@
 export const utilityLinks = [
   { label: "Facebook", href: "https://www.facebook.com/", external: true },
-  { label: "Area Riservata", href: "/area-riservata" },
+  { label: "Area Riservata (demo)", href: "/area-riservata" },
 ] as const;
 
 export const footerInstitutionalLinks = [
@@ -19,7 +19,7 @@ export const footerActionLinks = [
   { label: "Dona Ora", href: "/donazioni" },
   { label: "Donatori Sangue", href: "/donatori-sangue" },
   { label: "News & Eventi", href: "/news-eventi" },
-  { label: "Area Riservata", href: "/area-riservata" },
+  { label: "Area Riservata (demo)", href: "/area-riservata" },
 ] as const;
 
 export const homePathways = [

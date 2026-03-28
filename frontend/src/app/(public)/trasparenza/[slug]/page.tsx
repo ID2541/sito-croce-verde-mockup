@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { withBasePath } from "@/config/env";
 import { CallToActionBand } from "@/components/blocks/CallToActionBand";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { OrganiSocialiChart } from "@/components/transparency/OrganiSocialiChart";
-import { fetchTransparencyItemBySlug } from "@/lib/api/transparency";
+import { siteConfig } from "@/config/site";
+import { fetchTransparencyItemBySlug, getStaticTransparencyItems } from "@/lib/api/transparency";
 import type { ApiTransparencyDocument, ApiTransparencyItem } from "@/lib/api/types";
 
 type TransparencyDetailPageProps = {
@@ -12,6 +14,12 @@ type TransparencyDetailPageProps = {
     slug: string;
   }>;
 };
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getStaticTransparencyItems().map((item) => ({ slug: item.slug }));
+}
 
 function formatDate(dateValue: string | null | undefined): string | null {
   if (!dateValue) {
@@ -70,6 +78,9 @@ export async function generateMetadata({ params }: TransparencyDetailPageProps):
   return {
     title: `${item.title} | Trasparenza`,
     description: getDetailDescription(item),
+    alternates: {
+      canonical: `${siteConfig.siteUrl}/trasparenza/${slug}`,
+    },
   };
 }
 
@@ -114,7 +125,7 @@ export default async function TransparencyDetailPage({ params }: TransparencyDet
           <div className="mt-6 flex flex-wrap gap-3">
             {primaryDocument ? (
               <a
-                href={primaryDocument.publicUrl}
+                href={withBasePath(primaryDocument.publicUrl)}
                 className="link-focus inline-flex rounded-full bg-site-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-700"
               >
                 Apri documento ufficiale
@@ -219,7 +230,7 @@ export default async function TransparencyDetailPage({ params }: TransparencyDet
                   </p>
                 </div>
                 <a
-                  href={document.publicUrl}
+                  href={withBasePath(document.publicUrl)}
                   className="link-focus inline-flex rounded-full bg-site-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
                 >
                   Apri file
